@@ -1,0 +1,11 @@
+<div class = "detail" *ngIf="view" [@panelInOut] [ngStyle]="{'background-image': 'linear-gradient(#13102e 0%, '+user.fav_color+' 400%)'}">
+    <div class="top">
+        <div class="title"><b><i>{{user.title}}. </i></b><b>{{user.last_name}}</b> {{user.first_name}} <i class="fa regular" [ngClass]="{'fa-mars': user.gender=='male', 'fa-venus': user.gender=='female'}"></i></div>
+        <div class="close" (click)="close()">&times;</div>
+    </div>
+    <div class="description">{{user.catchphrase}}</div>
+    <p><i class="fa fa-envelope" aria-hidden="true"></i>    {{user.email}}</p>
+    <p><i class="fas fa-briefcase"></i> {{user.job}}</p>
+    <p><i class="fas fa-palette" [ngStyle]="{'color': user.fav_color}"></i> {{user.fav_color}}</p>
+    <img [ngStyle]="{'border-color': user.fav_color}" src="https://joeschmoe.io/api/v1/{{user.gender}}/{{user.first_name}}">
+</div>

@@ -1,0 +1,13 @@
+<div class = "box">
+    <p>COMMANDES </p>
+    <hr>
+    <ul>  
+        <li *ngFor="let order of orders" (click)="onClick(order)" [ngClass]="{'selected' : order==actual_order}">Commande du {{ order.date }}</li>
+          
+    </ul>  
+</div>
+
+<div *ngIf="actual_order">
+    <app-order-detail [order]="actual_order"></app-order-detail>
+</div>
+

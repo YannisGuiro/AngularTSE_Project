@@ -1,0 +1,10 @@
+<div class = "detail" *ngIf="view" [@panelInOut]>
+    <div class="top">
+        <div class="title">Commande de : <b>{{order.last_name}}</b> {{order.first_name}}</div>
+        <div class="close" (click)="close()">&times;</div>
+    </div>
+    <div class="description">Achat fait le : {{order.date}}</div>
+    <p>- Objet : {{order.object}} </p>
+    <p>- Quantité : {{order.quantity}}</p>
+    <p>- Prix : {{order.price}}€</p>
+</div>

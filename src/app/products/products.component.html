@@ -1,0 +1,12 @@
+<div class = "box">
+    <p>PRODUITS </p>
+    <hr>
+    <ul>  
+        <li *ngFor="let product of products" (click)="onClick(product)" [ngClass]="{'selected' : product==actual_product}" [routerLink]="['/products', product.id]">{{ product.title }}</li>
+    </ul>  
+</div>
+
+<div *ngIf="actual_product">
+    <app-product-detail [product]="actual_product"></app-product-detail>
+</div>
+

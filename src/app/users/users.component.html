@@ -1,0 +1,12 @@
+<div class = "box">
+    <p>UTILISATEURS </p>
+    <hr>
+    <ul>  
+        <li *ngFor="let user of users" (click)="onClick(user)" [ngClass]="{'selected' : user==actual_user}">{{ user.last_name }} {{ user.first_name }}</li>  
+    </ul>  
+</div>
+
+<div *ngIf="actual_user">
+    <app-user-detail [user]="actual_user"></app-user-detail>
+</div>
+

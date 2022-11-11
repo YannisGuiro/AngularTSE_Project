@@ -1,0 +1,12 @@
+<div class = "detail" *ngIf="view" [@panelInOut]>
+    <div class="top">
+        <div class="title">Produit : <b><i>{{product.title}}</i></b> ({{product.brand}})</div>
+        <div class="close" (click)="close()">&times;</div>
+    </div>
+    <div class="description">{{product.description}}</div>
+    <p>- Prix : {{product.price}}€ ({{calcPrice()}}€ après réduction)</p>
+    <p>- Note : {{product.rating}}/5</p>
+    <p>- Plus que <i>{{product.stock}}</i> exemplaires en stock !</p>
+    <p>- Catégorie : {{product.category}}</p>
+    <img src="{{product.thumbnail}}">
+</div>

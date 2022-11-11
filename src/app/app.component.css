@@ -1,0 +1,37 @@
+nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: rgb(60, 60, 60);
+}
+
+.logo{
+    padding: 12px;
+    background : linear-gradient(-60deg, #2b76b9 37%, #2cacd1 65%, #35eb93 100%);    
+    color: white;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    cursor : pointer;
+}
+li {
+    border: .5px rgb(117, 117, 117);
+    border-right-style: solid;
+    display: inline-block;
+}
+
+a:hover {
+    background-color: rgb(146, 146, 146);
+}
+
+.active {
+    background-color: rgb(146, 146, 146);
+}
+
+a {
+    text-align: center;
+    padding: 12px;
+    color : white;
+    display: block;
+    text-decoration: none;
+    transition: 0.3s ease-in-out;;
+}

@@ -1,0 +1,17 @@
+
+<form [formGroup]="checkoutForm" (ngSubmit)="onSubmit()">
+    
+    <label for="mail">Adresse mail</label>
+    <input type="text" placeholder="toto.xyz@gmail.com" formControlName="mail" [ngClass]="{'alert' : alert}">
+
+    <label for="subject">Sujet</label>
+    <input type="text" placeholder="Le sujet du message (optionnel)" formControlName="subject">
+
+    <label for="text">Commentaire</label>
+    <textarea type="text" placeholder="Envoyez-nous une suggestion, un problème rencontré..." formControlName="text" [ngClass]="{'alert' : alert}">
+    </textarea>
+
+    <input type="submit" value="Envoyer">
+
+  
+  </form>
